@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import gifZaWarudo from './zaWarudo.gif';
 
 function Welcome(props){
 
@@ -28,6 +29,11 @@ function Welcome(props){
             document.querySelector('.countSeconds').appendChild(h2);
             document.querySelectorAll('h2').forEach(e => e.style.color = "white");
             document.querySelector('h2').classList.add('bigSize');
+            let gifZaWarudo = document.createElement("img");
+            gifZaWarudo.setAttribute('src','/static/media/zaWarudo.c6a1bddad1b90f97339b.gif');
+            gifZaWarudo.setAttribute('alt','za Warudo');
+            document.querySelector('.countSeconds').appendChild(gifZaWarudo);
+
         }
 
         return () => clearInterval(interval);
